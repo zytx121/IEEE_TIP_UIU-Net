@@ -8,6 +8,28 @@ More specifically, it is detailed as follow.
 
 ![alt text](./outline.jpg)
 
+
+```bash
+# 0. 下载 HRSID 数据集 https://github.com/open-mmlab/mmrotate/tree/main/tools/data/hrsid
+
+# 1. json 标注转 binary mask 标注
+python json2mask.py
+
+# 2. 训练
+python train_sar_ship.py
+
+
+# 3. 生成测试集 binary mask
+python test_sar_ship.py
+
+# 4. 评估旋转框 mAP
+python eval_sar_ship.py
+
+
+```
+
+
+
 Citation
 ---------------------
 
