@@ -9,22 +9,22 @@ More specifically, it is detailed as follow.
 ![alt text](./outline.jpg)
 
 
-```bash
-# 0. 下载 HRSID 数据集 https://github.com/open-mmlab/mmrotate/tree/main/tools/data/hrsid
 
-# 1. json 标注转 binary mask 标注
+
+```bash
+# 0. download HRSID dataset from https://github.com/open-mmlab/mmrotate/tree/main/tools/data/hrsid
+
+# 1. convert json to binary mask
 python json2mask.py
 
-# 2. 训练
+# 2. train
 python train_sar_ship.py
 
-
-# 3. 生成测试集 binary mask
+# 3. generate binary mask
 python test_sar_ship.py
 
-# 4. 评估旋转框 mAP
+# 4. Evaluate the rotated box mAP
 python eval_sar_ship.py
-
 
 ```
 
