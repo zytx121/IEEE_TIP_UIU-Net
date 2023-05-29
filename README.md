@@ -29,6 +29,13 @@ python eval_sar_ship.py
 ```
 
 
+We speculate that there are two main reasons why UIU-Net performs poorly in SAR ship detection tasks: 
+
+- UIU-Net is unable to handle images with a large number of targets, and only focuses on the more prominent ones. There is a GAP between the optimization objective of the semantic segmentation task and the indicators of the SAR ship detection task.
+
+- The binary mask output of the UIU-Net network cannot handle densely arranged targets well. When a binary mask is converted into a rotated box, multiple densely arranged targets will merge into one target, resulting in the miss of the target. 
+
+
 
 Citation
 ---------------------
